@@ -824,14 +824,15 @@ ul {
     height: auto;
     padding-top: 12px;
     padding-bottom: 12px;
+    flex-wrap: wrap;
+    row-gap: 10px;
   }
 
   .menu-toggle {
     display: inline-flex;
   }
 
-  .main-nav,
-  .header-actions {
+  .main-nav {
     display: none;
     width: 100%;
     background: rgba(15, 31, 62, 0.95);
@@ -846,18 +847,29 @@ ul {
     align-items: flex-start;
     gap: 10px;
     font-size: 14px;
+    order: 4;
   }
 
   .header-actions {
-    margin-top: 8px;
-    flex-wrap: wrap;
+    display: flex;
     gap: 8px;
-    justify-content: flex-start;
+    width: auto;
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    margin-left: auto;
+    order: 3;
   }
 
   .site-header.is-menu-open .main-nav,
   .site-header.is-menu-open .header-actions {
     display: flex;
+  }
+
+  .header-actions .btn {
+    padding: 8px 12px;
+    font-size: 12px;
   }
 
   .hero-inner {
